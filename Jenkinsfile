@@ -1,5 +1,7 @@
 node {
 	def app
+	tools {nodejs "nodejs"}
+	
 	stage('Clone repository') {
 		git 'https://github.com/forOSS-report/binaryToDecimal.git'
 	}
