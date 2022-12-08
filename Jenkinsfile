@@ -1,6 +1,6 @@
 pipeline {
 	agent any 
-	tools {nodejs "node"}
+	tools {14.21.1-LTS "node"}
 	
 	stages{
 		stage('test'){
