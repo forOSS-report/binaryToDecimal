@@ -7,5 +7,5 @@ COPY package.json .
 RUN npm install --save
 #
 EXPOSE 3000
-CMD [ "node", “main.js” ]
+CMD [ "node" “main.js” ]
 
