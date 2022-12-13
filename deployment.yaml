@@ -37,11 +37,5 @@ spec:
     targetPort: 8080
   selector:
     app: foross
-spec:
-  ports:
-  - port: 80
-    targetPort: 8080
-  selector:   
-    app: foross
     tier: foross
   type: LoadBalancer
