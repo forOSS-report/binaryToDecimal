@@ -1,13 +1,13 @@
 apiVersion: apps/v1
 kind: Deployment
-metadata :
-  name : foross
-  labels :
+metadata:
+  name: foross
+  labels:
     app: foross
 spec:
-  replicas : 3
+  replicas: 3
   strategy:
-    type : Recreate
+    type: Recreate
   selector:
     matchLabels:
       app: foross
