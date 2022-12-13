@@ -32,6 +32,17 @@ pipeline {
 				}
 			}
 		}
+		stage('Deploy to GKE') {
+			when {
+				branch 'master'
+			}
+			steps {
+				sh "sed -i 's/chaeyes/foross:latest/chaeyes/foross:${env.BUILD_NUMBER}/g' deployment.yaml"
+				step([$class: 'KubernetesEngineBuilder', projectId: noted-function-362304, clusterName : forosskube,
+				     location: aisa-northeast3-a, manifestPattern:'deployment.yaml', credentialsId: gke, 
+				     verifyDeployments: true])
+			}
+		}
 	}
 }
 
