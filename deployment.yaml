@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata :
+  name : foross
+  labels :
+    app: foross
+spec:
+  replicas : 3
+  strategy:
+    type : Recreate
+  selector:
+    matchLabels:
+      app: foross
+  template:
+    metadata:
+      labels:
+        app: foross
+        tier: foross
+    spec:
+      containers:
+      - name: foross
+        image: foross/chaeyes
+        imagePullPolicy: Always
+        ports:
+      - containerPort: 8080
+        name: foross
+---
+apiVersion: v1
+kind: Service  
+metadata:
+  name: foross
+    labels:
+      app: foross
+spec:
+  ports:
+  - port: 80
+    targetPort: 8080
+  selector:
+    app: foross
+spec:
+  ports:
+  - port: 80
+    targetPort: 8080
+  selector:   
+    app: foross
+    tier: foross
+  type: LoadBalancer
