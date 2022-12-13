@@ -38,7 +38,7 @@ pipeline {
 			}
 			steps {
 				sh "sed -i 's|chaeyes@foross:latest|chaeyes@foross:${env.BUILD_NUMBER}|g' deployment.yaml"
-				step([$class: 'KubernetesEngineBuilder', projectId: 'noted-function-362304', clusterName: 'forosskube',
+				step([$class: 'KubernetesEngineBuilder', projectId: 'oss2022fall', clusterName: 'forosskube',
 				     location: 'asia-northeast3-a', manifestPattern:'deployment.yaml', credentialsId: 'gke', 
 				     verifyDeployments: true])
 			}
