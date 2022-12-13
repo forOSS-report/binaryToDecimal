@@ -23,7 +23,7 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
-        name: foross
+          name: foross
 ---
 apiVersion: v1
 kind: Service  
