@@ -7,5 +7,17 @@
         <link rel="stylesheet" href="./css/index.css">
         <title> Binary to Decimal</title>
     </head>
-    <p>test for deployment automatation</p>
+    <body>
+        <div id="title_container">
+            <h1>N to Decimal Translator</h1>
+        </div>
+        <div id ="bottom_color_container"></div>
+        <div id="form_container">
+            <form action="/inputBinary" method="POST">
+                <input class ="input_box" type="text" name = "binary" placeholder=" 2진수">
+                <button class ="input_button" type="submit">submit</button>
+            </form>
+            <p>    &nbsp decimal = <%= binTodeci %> </p>
+        </div>
+    </body>
 </html>
