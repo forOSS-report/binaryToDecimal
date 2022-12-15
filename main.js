@@ -11,7 +11,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.get('/', (req, res) => {
     res.render('index' ,  
-    { binTodeci : ' ', octalTodeci : ' '}); 
+    { binTodeci : ' ', octalTodeci : ' ', HexaTodeci : ' '}); 
 }); 
 
 app.post('/inputBinary', function(req, res){
@@ -30,7 +30,7 @@ app.post('/inputBinary', function(req, res){
 
     if(flag) {
         // res.send("받은값 : " + binary + "\n변환값 : " + decimal); // 사용자에게 지정한 값을 응답해줌
-        res.render('index', { binTodeci : decimal, octalTodeci :' '}); 
+        res.render('index', { binTodeci : decimal, octalTodeci :' ', HexaTodeci : ' '}); 
 
 
     }else {
@@ -55,10 +55,33 @@ app.post('/inputOctal', function(req, res){
     }
 
     if(flag) {
-        res.render('index', { binTodeci : ' ', octalTodeci : decimal}); 
+        res.render('index', { binTodeci : ' ', octalTodeci : decimal, HexaTodeci : ' '}); 
 
     }else {
         res.send("입력값이 8진수가 아닙니다" ); // 사용자에게 지정한 값을 응답해줌
+    }
+
+});
+
+app.post('/inputHexa', function(req, res){
+
+    var flag = true; 
+    var hexa = req.body.hexa;
+    var decimal = parseInt(hexa, 16);
+
+    for(var i = 0; i < hexa.length; i++) {
+        if((0 >(String(hexa).charAt(i)) || ( 15 < (String(hexa).charAt(i))))) {
+            console.log(String(hexa).charAt(i));
+            flag = false;
+            break;  
+        }
+    }
+
+    if(flag) {
+        res.render('index', { binTodeci : ' ', octalTodeci : '' , HexaTodeci : decimal}); 
+
+    }else {
+        res.send("입력값이 16진수가 아닙니다" ); // 사용자에게 지정한 값을 응답해줌
     }
 
 });
