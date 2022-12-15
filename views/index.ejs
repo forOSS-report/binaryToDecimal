@@ -5,6 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/index.css">
+        <script src="./js/index.js"></script>
+
         <title> Binary to Decimal</title>
     </head>
     <body>
@@ -13,21 +15,19 @@
         </div>
         <div id ="bottom_color_container"></div>
         <div id="form_container">
-            <form action="/inputBinary" method="POST">
-                <input class ="input_box" type="text" name = "binary" placeholder=" 2진수">
-                <button class ="input_button" type="submit">submit</button>
-            </form>
-            <p>    &nbsp decimal = <%= binTodeci %> </p>
-            <form action="/inputOctal" method="POST">
-                <input class ="input_box" type="text" name = "octal" placeholder=" 8진수">
-                <button class ="input_button" type="submit">submit</button>
-           </form>
-           <p>   &nbsp decimal = <%= octalTodeci %></p>
-            <form action="/inputHexa" method="POST">
-                <input class ="input_box" type="text" name = "hexa" placeholder=" 16진수">
-                <button class ="input_button" type="submit">submit</button>
-            </form>
-            <p>   &nbsp decimal = <%= HexaTodeci %></p>
+
+                <input id ="inputed_binary"class ="input_box" type="text" name = "binary" placeholder=" 2진수">
+                <button onclick= 'f_clickbisubmit_Fucn()' class ="input_button" type="submit">submit</button>
+                <p id="bitodeci_output">  &nbsp decimal = </p>
+
+                <input id ="inputed_octal"class ="input_box" type="text" name = "octal" placeholder=" 8진수">
+                <button onclick= 'f_clickocsubmit_Fucn()' class ="input_button" type="submit">submit</button>
+                <p id="octaltodeci_output"> &nbsp decimal = </p>
+
+                <input id ="inputed_hexadeci"id =" "class ="input_box" type="text" name = "hexa" placeholder=" 16진수">
+                <button onclick= 'f_clickhexsubmit_Fucn()'class ="input_button" type="submit">submit</button>
+                <p id="hexatodeci_output">  &nbsp decimal = </p>
+                
         </div>
     </body>
 </html>
