@@ -1,1 +1,64 @@
-/* css file for index.ejs */
+h1 {
+    margin-top: 2%;
+    text-align: center;
+    color: aliceblue;
+}
+
+p {
+    height: 30px;
+    padding-top: 3%;
+    width: 400px;
+    background-color: rgba(95, 133, 187);
+    font-size: 20px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid tomato;
+    margin-bottom: 50px;
+    border-radius: 5px;
+    font-family: sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    color: aliceblue;
+
+}
+
+#title_container {
+    margin-top: 2%;
+    background-color: #2248A8;
+    justify-content: center;
+    height: 100px;
+    display: flex;
+    font-style: italic;
+}
+
+#bottom_color_container{
+    height: 10px;
+    background-color: tomato;
+    padding-bottom: 3px;
+
+}
+
+#form_container {
+    margin: 0 auto;
+    width: 500px;
+    padding-top: 50px;
+}
+
+.input_box {
+    width: 300px;
+    height: 50px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid #2248A8;
+}
+
+.input_button {
+    width: 100px;
+    height: 50px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid #2248A8;
+}
