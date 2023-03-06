@@ -1,7 +1,9 @@
 # binaryToDecimal
 
-#this is for report OSS
+# this is for report OSS - 
 ### n 진수 값을 입력받아 Demical로 변환해주는 프로그램
+
+* CI/CD 파이프라인 구축 : Jenkins, Kubernetes
 
 ------------------
 
